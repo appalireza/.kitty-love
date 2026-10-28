@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffb6d5">
+<title>دنیای رستا ♡</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:Tahoma,Arial,sans-serif;color:#854563;
+ background:linear-gradient(145deg,#fff4fa,#ffddec,#f0e8ff);
+ min-height:100vh;overflow-x:hidden
+}
+main{max-width:680px;width:92%;margin:auto;padding:24px 0 40px}
+header{text-align:center;padding:22px 8px}
+.tag{display:inline-block;background:#ffffffbb;padding:9px 16px;border-radius:30px}
+h1{font-size:clamp(28px,8vw,43px);color:#e64f96;margin:22px 0 10px}
+h2{font-size:21px;color:#df5796;margin:0 0 12px}
+p{line-height:2}
+.cat{font-size:105px;cursor:pointer;animation:bob 2s infinite;display:inline-block}
+@keyframes bob{50%{transform:translateY(-9px) rotate(4deg)}}
+.btn{
+ border:0;border-radius:30px;padding:14px 20px;
+ background:linear-gradient(120deg,#ff65a5,#f391c0);
+ color:white;font:bold 15px Tahoma;cursor:pointer;
+ box-shadow:0 7px 18px #eb77a544;margin:5px
+}
+.light{background:white;color:#dc5796;border:1px solid #ffd0e3;box-shadow:none}
+.card{
+ background:#ffffffcf;border:1px solid white;border-radius:24px;
+ padding:22px;margin:16px 0;box-shadow:0 10px 30px #b66b961b
+}
+.center{text-align:center}
+.hidden{display:none!important}
+.grid{display:grid;grid-template-columns:1fr;gap:0}
+.envelope{font-size:75px;cursor:pointer;margin:12px}
+.letter{
+ white-space:pre-line;text-align:right;line-height:2.2;
+ background:#fff7fb;border:1px dashed #ef9cbe;
+ border-radius:17px;padding:17px;margin-top:15px
+}
+.hugcount{font-size:32px;color:#e64f96;font-weight:bold}
+.heart{
+ position:fixed;bottom:-40px;pointer-events:none;
+ animation:rise 3.5s linear forwards;z-index:10
+}
+@keyframes rise{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+#toast{
+ position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
+ background:white;color:#d94e91;padding:13px 18px;border-radius:25px;
+ box-shadow:0 5px 20px #a84c7525;z-index:20;
+ width:max-content;max-width:90%;text-align:center
+}
+footer{text-align:center;font-size:12px;padding:20px;opacity:.7}
+@media(min-width:560px){
+ .grid{grid-template-columns:1fr 1fr;gap:14px}
+ .grid .card{margin:0}
+}
+</style>
+</head>
+
+<body>
+<main>
+<header>
+ <span class="tag">🎀 این دنیای کوچولو فقط برای رستاست 🎀</span>
+ <h1>دنیای رستا ♡</h1>
+ <p>رستای من، آماده‌ای وارد دنیای صورتی خودت بشی؟ 🐱💗</p>
+ <div class="cat" id="cat">🐱</div>
+ <p>میووو! روی گربه هم بزن، یه سورپرایز داری 😽</p>
+ <button class="btn" id="start">ورود به دنیای من و تو 💞</button>
+</header>
+
+<section id="world" class="hidden">
+
+ <div class="card center">
+  <h2>سلام رستای قشنگم! 💗</h2>
+  <p>پیشی کوچولوی من، اینجا یه دنیای کوچیکه که فقط برای لبخند تو ساخته شده.</p>
+  <button class="btn light" id="kiss">یه بوس کوچولو 😽💋</button>
+ </div>
+
+ <div class="grid">
+  <div class="card center">
+   <h2>💌 یه نامه مخفی</h2>
+   <p>رستا، یه حرفایی هست که دلم می‌خواد بخونیشون...</p>
+   <div class="envelope" id="env">💌</div>
+   <button class="btn light" id="openletter">نامه رو باز کن</button>
+
+   <div id="letter" class="letter hidden">رستای قشنگم، پیشی کوچولوی من 💗🎀
+
+این صفحه کوچولو رو ساختم که یه لبخند روی لبات بیارم.
+
+شاید همیشه نتونم بهترین جمله‌ها رو پیدا کنم، ولی می‌خوام بدونی که بودنت برام قشنگه.
+
+اگه یه روز خسته بودی، لازم نیست همیشه قوی باشی.
+می‌تونی حرف بزنی، درد دل کنی یا حتی فقط استراحت کنی.
+
+دلم می‌خواد وقتی این صفحه رو باز می‌کنی،
+برای چند لحظه هم که شده لبخند بزنی. 🐱💕
+
+مراقب قلب قشنگت باش، پیشی کوچولوی من.
+
+با کلی بغل و بوس،
+آدمِ خودت ♡</div>
+  </div>
+
+  <div class="card center">
+   <h2>🫂 دستگاه بغل مجازی</h2>
+   <p>هر وقت یه بغل خواستی، این دکمه رو بزن!</p>
+   <div class="hugcount" id="count">۰</div>
+   <button class="btn" id="hug">بغل محکممم 🤗</button>
+   <p id="hugtext">یه بغل گرم و نرم برای رستا...</p>
+  </div>
+ </div>
+
+ <div class="card center">
+  <h2>🐾 مأموریت امروز رستا</h2>
+  <p id="mission">امروز یه کار کوچیک برای خوشحال کردن خودت انجام بده، پیشی من! 💗</p>
+  <button class="btn light" id="newmission">یه مأموریت دیگه ✨</button>
+ </div>
+
+ <div class="card center">
+  <h2>🌷 یه یادآوری کوچولو</h2>
+  <p>رستا جان، لازم نیست هر روز عالی باشی. همین که خودت هستی، ارزشمنده.</p>
+  <p>لبخندت قشنگه، دلت عزیزه و تو لایق کلی مهربونی هستی. 💕</p>
+  <div style="font-size:27px">🌸 💗 🐱 💗 🌸</div>
+ </div>
+
+</section>
+
+<footer>با عشق ساخته شده، مخصوص رستای من ♡ 🎀</footer>
+</main>
+
+<div id="toast" class="hidden"></div>
+
+<script>
+const $=id=>document.getElementById(id);
+let hugs=0;
+
+function hearts(n=12){
+ const symbols=["💗","💕","💖","💘","♡","🐾"];
+ for(let i=0;i<n;i++){
+  const e=document.createElement("span");
+  e.className="heart";
+  e.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  e.style.left=Math.random()*100+"vw";
+  e.style.fontSize=(18+Math.random()*22)+"px";
+  e.style.animationDuration=(2.5+Math.random()*2)+"s";
+  document.body.appendChild(e);
+  setTimeout(()=>e.remove(),5000);
+ }
+}
+
+function say(message){
+ const t=$("toast");
+ t.textContent=message;
+ t.classList.remove("hidden");
+ clearTimeout(window.toastTimer);
+ window.toastTimer=setTimeout(()=>t.classList.add("hidden"),2400);
+}
+
+$("start").onclick=()=>{
+ $("world").classList.remove("hidden");
+ $("start").textContent="دوباره قلب بفرست 💗";
+ hearts(20);
+ $("world").scrollIntoView({behavior:"smooth"});
+};
+
+$("cat").onclick=()=>{
+ hearts(10);
+ say("میووو رستا! یه عالمه قلب برای تو 😽💗");
+};
+
+$("kiss").onclick=()=>{
+ hearts(18);
+ say("بووووس رسید برای رستای من! 😽💋");
+};
+
+function toggleLetter(){
+ const isHidden=$("letter").classList.toggle("hidden");
+ $("env").textContent=isHidden?"💌":"💝";
+ $("openletter").textContent=isHidden?"نامه رو باز کن":"نامه رو ببند";
+ if(!isHidden)hearts(12);
+}
+
+$("env").onclick=toggleLetter;
+$("openletter").onclick=toggleLetter;
+
+const hugMessages=[
+ "یه بغل نرم و گرم برای رستا 🤍",
+ "یکی دیگه! این یکی محکم‌تره 🫂",
+ "این بغل با نوازش سر همراهه 🐱",
+ "یه بغل پر از قلب و مهربونی 💗",
+ "پیشی من، امیدوارم الان لبخند زده باشی 🎀"
+];
+
+$("hug").onclick=()=>{
+ hugs++;
+ $("count").textContent=new Intl.NumberFormat("fa-IR").format(hugs);
+ $("hugtext").textContent=hugMessages[(hugs-1)%hugMessages.length];
+ hearts(12);
+};
+
+const missions=[
+ "یه آهنگ موردعلاقه‌ات رو گوش بده 🎧",
+ "یه خوراکی خوشمزه برای خودت انتخاب کن 🍓",
+ "چند دقیقه استراحت کن و به خودت برس 🌷",
+ "سه تا چیز کوچیک که خوشحالت می‌کنن به یاد بیار ✨",
+ "یه عکس قشنگ از چیزی که دوست داری بگیر 📸",
+ "امروز با خودت مهربون‌تر باش، رستا جان 💗",
+ "یه نوشیدنی خوشمزه درست کن و ازش لذت ببر 🧋"
+];
+
+$("newmission").onclick=()=>{
+ let next;
+ do{
+  next=missions[Math.floor(Math.random()*missions.length)];
+ }while(missions.length>1&&next===$("mission").textContent);
+ $("mission").textContent=next;
+ hearts(6);
+};
+</script>
+</body>
+</html>
